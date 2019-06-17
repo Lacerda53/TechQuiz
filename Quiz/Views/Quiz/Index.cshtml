@@ -1,0 +1,125 @@
+﻿@model Quiz.Models.Test
+
+@{
+    ViewData["Title"] = "Quiz";
+}
+<div class="section section-variant-1 bg-white">
+    <div class="shell shell-wide text-center">
+        <h3>Quiz</h3>
+        <div class="divider divider-default"></div>
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+                <form asp-action="Index">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="text-left">
+                        @{
+                            int index_questao = 0;
+                            int index_alternativa = 0;
+                        }
+                        @foreach (var Questao in Model.Questoes)
+                        {
+                            <h4 class="text-muted">@Questao.Enunciado</h4>
+                            @if (Questao.Msg == "Right Answer")
+                            {
+                                <h4>
+                                    <span class="label label-success">@Questao.Msg</span>
+                                </h4>
+                            }
+                            else
+                            {
+                                <h4>
+                                    <span class="label label-danger">@Questao.Msg</span>
+                                </h4>
+                            }
+                            <br />
+                            <input type="hidden" value="@Questao.ID" name="Questoes[@index_questao].ID" />
+                            <input type="hidden" value="@Questao.Enunciado" name="Questoes[@index_questao].Enunciado" />
+                            { index_alternativa = 0; }
+                            @foreach (var Alternativa in Questao.Alternativas)
+                            {
+
+                                <div class="custom-control custom-radio">
+                                    <label>
+                                        @{ ViewBag.Checked = Alternativa.Resposta == Questao.Resposta ? "checked" : string.Empty; }
+                                        <input type="radio" value="@Alternativa.Resposta" class="custom-control-input" name="Questoes[@index_questao].Resposta" @ViewBag.Checked />
+                                        <input type="hidden" value="@Alternativa.Resposta" name="Questoes[@index_questao].Alternativas[@index_alternativa].Resposta" />
+                                        <input type="hidden" value="@Alternativa.ID" name="Questoes[@index_questao].Alternativas[@index_alternativa].ID" />
+                                        @Alternativa.Resposta
+                                    </label>
+                                </div>
+                                { index_alternativa++; }
+                            }
+                            <br />
+                            { index_questao++; }
+                        }
+                    </div>
+                    <div class="col-md-8">
+                        <input type="submit" value="Reply" class="button button-primary btn-flat button-nina" />
+                        <a asp-action="Index" asp-controller="Home" class="button button-xs button-default-outline button-nina">Back to Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="links-fixos">
+    <!-- Botão para acionar modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#SiteModal">
+        Go to the text
+    </button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="SiteModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalLongoExemplo">Read the text below:</h5>
+                <div class="divider divider-default"></div>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>x</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-justify recuo">
+                    We think of smartphones as something recent, up-to-date, but believe it or not, the first
+                    smartphone was actually invented about two decades ago, when the term "smartphone" did not
+                    even exist. In an article in the technology section of <i>Bloomberg Businessweek</i> (June 29,2012),
+                    Ira Sager states that there was a smartphone called Simon (a reference to the game "Simon says...")
+                    which had the features of a computer, cell phone, fax machine, and pager. It was a black brick
+                    weighting 18 ounces (approximately 510 grams). Sager claims Simon appeared some years before cell
+                    phones where called "smart", anticipating the term created only in 1997, and many years before
+                    iPhones, iPads, and Android-based phones appeared on the market to change the concept of cell
+                    phones and their capabilities.
+                </p>
+                <p class="text-justify recuo">
+                    <i>Wikipedia</i> also mentions Simon and its history. According to an entry on Smartphones,
+                    Simon's prototype was named "Angler" and was presented at the COMDEX computer and technology
+                    trade show in Las Vegas, on November 2, 1992. It was later re-baptized as The Simon Personal
+                    Communicator at the Wireless World Conference in November 1992. This handheld cellular phone
+                    and PDA was created by IBM, assembled by Mitsubish Electric Corp., and distributed by Bell South
+                    in the USA between August 1994 and February 1995.
+                </p>
+                <p class="text-justify recuo">
+                    Simon already had a monochromatic touch screen, which enabled the user to input information by
+                    either tapping the icons or poking them with a stylus. Its innovations included features and
+                    applications such as email, clock, an address book, appointment scheduler, calender, calculator,
+                    world time clock, electronic note pad, handwritten annotations, standard and predictive typing
+                    (with touch screen keyboards that guessed the next characters to be typed), and a basic game
+                    called Scramble, which consisted of moving squares to form a picture on the screen. Simon
+                    already had the equivalent of our modern apps, or what Sager calls a "way to deliver more
+                    features" such as maps, music and a camera. All this was possible with the insertion of a
+                    memory card into the phone.
+                </p>
+                <p class="text-justify recuo">
+                    Sager mentions that Simon's battery lasted from 30 to 60 minutes, depending on the amount
+                    of data used and the area covered. He adds that Simon can still be purchased nowadays through
+                    collectors who sell them for the same price they were retailed two decades ago, when about
+                    50,000 units were sold at $899 each.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

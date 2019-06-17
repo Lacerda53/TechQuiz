@@ -1,0 +1,228 @@
+﻿@{
+    Layout = null;
+
+}
+<!--https://livedemo00.template-help.com/wt_62466_v1/-->
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="pt-br">
+<head>
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="~/images/Favicon.png" />
+    <script src="~/js/headerEfects.js"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:200,400%7CLato:300,400,300italic,700%7CMontserrat:900">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/StylePublic.css" rel="stylesheet" />
+    <link href="~/lib/MaterialDesign-Webfont-master/css/materialdesignicons.css" rel="stylesheet" />
+    <link href="~/lib/bigmug-line_coders/css/fl-bigmug-line.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Page preloader-->
+    <div class="page-loader">
+        <div class="page-loader-body">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"> </div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"> </div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"> </div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page-->
+    <div class="page">
+        <!-- Page Header-->
+        <header class="section page-header breadcrumbs-custom-wrap bg-gradient bg-secondary-2">
+            <!-- RD Navbar-->
+            <div class="rd-navbar-wrap rd-navbar-default">
+                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="2px" data-lg-stick-up-offset="2px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+                    <div class="rd-navbar-inner">
+                        <!-- RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <!-- RD Navbar Toggle-->
+                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                            <!-- RD Navbar Brand-->
+                            <div class="rd-navbar-brand"><a class=" btn text-logo" asp-action="Index">TECH QUIZ</a></div>
+                        </div>
+                        <div class="rd-navbar-aside-right">
+                            <div class="rd-navbar-nav-wrap">
+                                <!-- RD Navbar Nav-->
+                                <ul class="rd-navbar-nav">
+                                    <li class="active">
+                                        <a asp-controller="Home" asp-action="Index">Home</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Home" asp-action="About">About</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Home" asp-action="Contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                            <div class="rd-navbar-aside-right-inner rd-navbar-collapse">
+                                <a class="button button-xs button-default-outline button-nina" asp-controller="Quiz" asp-action="Index">Start Quiz</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Breadcrumbs-->
+            <section class="breadcrumbs-custom breadcrumbs-custom-lg breadcrumbs-custom-svg">
+                <div class="shell">
+                    <h5 class="fadeIn">Welcome to Tech Quiz</h5>
+                    <h3 class="typed-text-wrap">TEST YOUR&nbsp;<span class="typed-text"></span>&nbsp;IN ENGLISH</h3>
+                    <div class="group-md button-group">
+                        <a class="button button-secondary button-nina" asp-controller="Quiz" asp-action="Index">Start Quiz </a>
+                        <a class="button button-default-outline button-nina" href="#welcome">Get to know more</a>
+                    </div>
+                </div>
+                <div class="parallax-scene-js parallax-scene" data-scalar-x="5" data-scalar-y="10">
+                    <div class="layer-01">
+                        <div class="layer" data-depth="0.25">
+                            <img src="~/images/parallax-scene-01-132x133.png" alt="" width="132" height="133" />
+                        </div>
+                    </div>
+                    <div class="layer-02">
+                        <div class="layer" data-depth=".55">
+                            <img src="~/images/parallax-scene-02-186x208.png" alt="" width="186" height="208" />
+                        </div>
+                    </div>
+                    <div class="layer-03">
+                        <div class="layer" data-depth="0.1">
+                            <img src="~/images/parallax-scene-03-108x120.png" alt="" width="108" height="120" />
+                        </div>
+                    </div>
+                    <div class="layer-04">
+                        <div class="layer" data-depth="0.25">
+                            <img src="~/images/parallax-scene-04-124x145.png" alt="" width="124" height="145" />
+                        </div>
+                    </div>
+                    <div class="layer-05">
+                        <div class="layer" data-depth="0.15">
+                            <img src="~/images/parallax-scene-05-100x101.png" alt="" width="100" height="101" />
+                        </div>
+                    </div>
+                    <div class="layer-06">
+                        <div class="layer" data-depth="0.65">
+                            <img src="~/images/parallax-scene-06-240x243.png" alt="" width="240" height="243" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <!-- Build Your Site In-Browser with NOVI Builder-->
+        <section class="section section-variant-1 bg-white" id="welcome">
+            <!-- Section wave-->
+            <div class="section-wave">
+                <svg x="0px" y="0px" width="1920px" height="45px" viewBox="0 0 1920 45" preserveAspectRatio="none">
+                    <path d="M1920,0c-82.8,0-108.8,44.4-192,44.4c-78.8,0-116.5-43.7-192-43.7 c-77.1,0-115.9,44.4-192,44.4c-78.2,0-114.6-44.4-192-44.4c-78.4,0-115.3,44.4-192,44.4C883.1,45,841,0.6,768,0.6 C691,0.6,652.8,45,576,45C502.4,45,461.9,0.6,385,0.6C306.5,0.6,267.9,45,191,45C115.1,45,78,0.6,0,0.6V45h1920V0z"></path>
+                </svg>
+            </div>
+            <div class="shell shell-bigger">
+                <div class="range range-ten range-50 range-sm-center range-md-middle range-lg-justify range-md-reverse">
+                    <div class="cell-sm-7 cell-md-5 cell-lg-4">
+                        <h3>hi, we are a interdisciplinary team</h3>
+                        <div class="divider divider-default"></div>
+                        <p class="heading-5">As students we were designated to construct a interdisciplinary project for the English and the Programming courses. To do so, we separeted our duties in smaller teams to achieve the goal to deliever this project.</p>
+                        <p class="text-spacing-sm">
+                            Information Systems, Nursing and Law students working together to
+                            give the best in this project.
+                        </p><a class="button button-default-outline button-nina" href="https://www.unitpac.com.br/inicio">learn more</a>
+                    </div>
+                    <div class="cell-sm-9 cell-md-5">
+                        <img src="~/images/interdisc.jpg" alt="" width="720" height="459" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section section-xs text-center bg-gradient-1">
+            <div class="shell-wide">
+                <div class="box-cta-thin">
+                    <p class="big"><span class="label-cta label-cta-primary">Learn!</span><strong>Projects</strong><span>&nbsp;are the chance to apply your knownlegde.&nbsp;</span><a class="link-bold">Hands on!!</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page Footer-->
+        <!-- Footer Minimal -->
+        <footer class="section page-footer page-footer-minimal text-center bg-gray-darker">
+            <div class="shell shell-wide">
+                <div class="range range-xs-center range-sm-middle range-30">
+                    <div class="cell-sm-10 cell-md-7 cell-lg-4 text-lg-left"><a asp-controller="Home" asp-action="Index" class="text-logo">TECH QUIZ</a></div>
+                    <div class="cell-sm-10 cell-md-7 cell-lg-4">
+                        <p class="right">&#169;&nbsp;<span class="copyright-year"></span> All Rights Reserved&nbsp;<a href="#">Terms of Use</a>&nbsp;and&nbsp;<a href="privacy-policy.html">Privacy Policy</a></p>
+                        <!-- {%FOOTER_LINK}-->
+                    </div>
+                    <div class="cell-sm-10 cell-md-7 cell-lg-4 text-lg-right">
+                        <ul class="group-xs group-middle">
+                            <li><a class="icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-facebook" href="https://www.facebook.com/lacerda53"></a></li>
+                            <li><a class="icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-twitter" href="https://twitter.com/Lacerda_53"></a></li>
+                            <li><a class="icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="https://www.instagram.com/guilherme_andrade2/"></a></li>
+                            <li><a class="icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-google" href=""></a></li>
+                            <li><a class="icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-linkedin" href="https://www.linkedin.com/in/lacerda53/"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="~/js/Core.js"></script>
+    <script src="~/js/Script.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+</body><!-- Google Tag Manager -->
+</html>

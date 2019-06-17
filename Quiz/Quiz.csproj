@@ -1,0 +1,107 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Admin\Data\**" />
+    <Compile Remove="wwwroot\css\alt\**" />
+    <Compile Remove="wwwroot\images\credit\**" />
+    <Content Remove="Areas\Admin\Data\**" />
+    <Content Remove="wwwroot\css\alt\**" />
+    <Content Remove="wwwroot\images\credit\**" />
+    <EmbeddedResource Remove="Areas\Admin\Data\**" />
+    <EmbeddedResource Remove="wwwroot\css\alt\**" />
+    <EmbeddedResource Remove="wwwroot\images\credit\**" />
+    <None Remove="Areas\Admin\Data\**" />
+    <None Remove="wwwroot\css\alt\**" />
+    <None Remove="wwwroot\images\credit\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Quiz\Text.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\Admin\Views\Shared\Error.cshtml" />
+    <Content Remove="Areas\Admin\Views\Shared\_CookieConsentPartial.cshtml" />
+    <Content Remove="Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <Content Remove="Views\Home\Test.cshtml" />
+    <Content Remove="Views\Quiz\Text.cshtml" />
+    <Content Remove="wwwroot\css\bootstrap.css" />
+    <Content Remove="wwwroot\images\avatar.png" />
+    <Content Remove="wwwroot\images\avatar04.png" />
+    <Content Remove="wwwroot\images\avatar2.png" />
+    <Content Remove="wwwroot\images\avatar3.png" />
+    <Content Remove="wwwroot\images\avatar5.png" />
+    <Content Remove="wwwroot\images\default-50x50.gif" />
+    <Content Remove="wwwroot\images\icons.png" />
+    <Content Remove="wwwroot\images\photo1.png" />
+    <Content Remove="wwwroot\images\photo2.png" />
+    <Content Remove="wwwroot\images\photo3.jpg" />
+    <Content Remove="wwwroot\images\photo4.jpg" />
+    <Content Remove="wwwroot\images\user1-128x128.jpg" />
+    <Content Remove="wwwroot\images\user2-160x160.jpg" />
+    <Content Remove="wwwroot\images\user3-128x128.jpg" />
+    <Content Remove="wwwroot\images\user4-128x128.jpg" />
+    <Content Remove="wwwroot\images\user5-128x128.jpg" />
+    <Content Remove="wwwroot\images\user6-128x128.jpg" />
+    <Content Remove="wwwroot\images\user7-128x128.jpg" />
+    <Content Remove="wwwroot\images\user8-128x128.jpg" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\ionicons.css" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\ionicons.min.css" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\fonts\ionicons.eot" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\fonts\ionicons.svg" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\fonts\ionicons.ttf" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\fonts\ionicons.woff" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Quiz\Text.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.60.6" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\bigmug-line_coders\fonts\fl-bigmug-line.svg" />
+    <None Include="wwwroot\lib\MaterialDesign-Webfont-master\fonts\materialdesignicons-webfont.svg" />
+    <None Include="wwwroot\lib\MaterialDesign-Webfont-master\fonts\materialdesignicons-webfont.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Areas\Admin\Views\Questao\Delete.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Admin\Views\Questao\Details.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Admin\Views\Questao\Edit.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Admin\Views\Questao\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Admin\Views\Shared\_Layout.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Admin\Views\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Admin\Views\_ViewStart.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties libman_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
